@@ -19,3 +19,13 @@ const products = [
 
 const promotionCode = "";
 // เริ่มเขียนโค้ดตรงนี้
+function calculateTotalPrice (products , promotionCode){
+  if (promotionCode ==="SALE50"){
+    return "ได้รับส่วนลด 50% มูลค่าสินค้ารวม "+ (products-((products)*0.5));
+  }else if (promotionCode ==="SALE20"){
+    return "ได้รับส่วนลด 20% มูลค่าสินค้ารวม " + (products-((products)*0.2));
+  }else if (promotionCode === ""){
+    return "ไม่ได้รับส่วนลด มูลค่าสินค้ารวม "+(products)+" บาท";
+  }
+}
+console.log(calculateTotalPrice(15,""))//ตอบ
